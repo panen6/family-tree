@@ -1,0 +1,64 @@
+<link rel="import"
+      href="../../bower_components/polymer/polymer-element.html">
+<link rel="import"
+      href="../../bower_components/paper-input/paper-input.html">
+<link rel="import"
+      href="../../bower_components/paper-button/paper-button.html">
+<link rel="import"
+      href="../../bower_components/paper-material/paper-material.html">
+<link rel="import"
+      href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="signup-view">
+  <template>
+    <style is="custom-style"
+           include="iron-flex iron-flex-alignment"></style>
+    <style>
+       :host {
+        display: block;
+        padding: 10px;
+      }
+
+      paper-material {
+        padding: 10px;
+        background: white;
+      }
+    </style>
+
+    <paper-material class="flex layout vertical"
+                    elevation="1">
+
+      <paper-input id="email"
+                   label="Email"></paper-input>
+
+      <paper-input id="pass"
+                   label="Пароль"
+                   type="password"></paper-input>
+
+      <paper-button raised
+                    on-tap="singup">Зарегистрироваться</paper-button>
+
+    </paper-material>
+
+  </template>
+
+  <script>
+    class signupView extends Polymer.Element {
+
+      static get is() { return 'signup-view'; }
+
+      static get properties() {
+        return {
+
+        };
+      }
+
+      singup() {
+        
+      }
+
+    }
+
+    window.customElements.define(signupView.is, signupView);
+  </script>
+</dom-module>

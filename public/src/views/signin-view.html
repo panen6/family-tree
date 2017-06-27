@@ -1,0 +1,58 @@
+<link rel="import"
+      href="../../bower_components/polymer/polymer-element.html">
+<link rel="import"
+      href="../../bower_components/paper-input/paper-input.html">
+<link rel="import"
+      href="../../bower_components/paper-button/paper-button.html">
+<link rel="import"
+      href="../../bower_components/paper-material/paper-material.html">
+<link rel="import"
+      href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="signin-view">
+  <template>
+    <style is="custom-style"
+           include="iron-flex iron-flex-alignment"></style>
+    <style>
+       :host {
+         display: block;
+         padding: 10px;
+       }
+
+       paper-material {
+         padding: 10px;
+         background: white;
+       }
+    </style>
+
+    <paper-material class="flex layout vertical" elevation="1">
+
+      <paper-input label="Email"></paper-input>
+
+      <paper-input label="Пароль"
+                   type="password"></paper-input>
+
+      <paper-button raised>Войти</paper-button>
+      
+      <a href="signup">Регистрация</a>
+
+    </paper-material>
+
+  </template>
+
+  <script>
+    class signinView extends Polymer.Element {
+
+      static get is() { return 'signin-view'; }
+
+      static get properties() {
+        return {
+
+        };
+      }
+
+    }
+
+    window.customElements.define(signinView.is, signinView);
+  </script>
+</dom-module>
